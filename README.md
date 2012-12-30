@@ -1,4 +1,4 @@
 django-test
 ===========
 
-Django Test-Project
+Django Test-Projects
