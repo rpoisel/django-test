@@ -12,7 +12,8 @@ class Poll(models.Model):
         return self.question
 
     def published_recently(self):
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+        return self.pub_date >= timezone.now() - datetime.timedelta(days=30)
+    # determine options for this method (kind of property)
     published_recently.admin_order_field = 'pub_date'
     published_recently.boolean = True
     published_recently.short_description = 'Published recently?'
